@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+
+<div ng-app=""  ng-init="firstName='ZORBAZ'">
+
+  <!--AngularJS Directives -->
+  <p>Mustafa  <span ng-bind="firstName"></span></p>
+  
+  <!-- AngularJS Extends HTML -->
+  <p>Kullanıcı İsmi : <input type="text" ng-model="name"></p>
+  <div class="alert alert-success">
+  <strong>Merhaba  {{name}}</strong>
+  </div>
+</div>
+
+</body>
+</html>

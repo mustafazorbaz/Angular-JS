@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+ 
+<!-- Data Model -->
+<ul>
+    <li><code class="w3-codespan">currency</code> Format a number to a currency format.</li>
+    <li><code class="w3-codespan">date</code> Format a date to a specified format.</li>
+    <li><code class="w3-codespan">filter</code> Select a subset of items from an array.</li>
+    <li><code class="w3-codespan">json</code> Format an object to a JSON string.</li>
+    <li><code class="w3-codespan">limitTo</code> Limits an array/string, into a specified number of elements/characters.</li>
+    <li><code class="w3-codespan">lowercase</code> Format a string to lower case.</li>
+    <li><code class="w3-codespan">number</code> Format a number to a string.</li>
+    <li><code class="w3-codespan">orderBy</code> Orders an array by an expression.</li>
+    <li><code class="w3-codespan">uppercase</code> Format a string to upper case.</li>
+</ul>
+
+
+<h1>Example1</h1>
+<div ng-app="example1" ng-controller="personControl">
+
+<p>Kişi {{ lastName | uppercase }}</p>
+
+</div>
+
+<script>
+angular.module('example1', []).controller('personControl', function($scope) {
+    $scope.firstName = "mustafa",
+    $scope.lastName = "zorbaz"
+});
+</script>
+
+
+
+
+</body>
+</html>

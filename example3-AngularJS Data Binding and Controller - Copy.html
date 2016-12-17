@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+ 
+<!-- Data Model -->
+<!-- Example1 Two-way Binding -->
+<p>Example1 One-way Binding</p>
+<div ng-app="example1" ng-controller="control">
+	Adı: <input ng-model="adi">
+    <p ng-click="changeName()">Adı: {{adi}}</p>
+</div>
+
+<script>
+var app = angular.module('example1', []);
+app.controller('control', function($scope) {
+    $scope.adi = "Mustafa";
+    $scope.soyadi = "ZORBAZ";   
+	$scope.changeName = function() {
+        $scope.adi = $scope.soyadi;
+    }
+});
+</script>
+
+
+
+</body>
+</html>

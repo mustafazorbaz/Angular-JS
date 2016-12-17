@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+ 
+<!-- AngularJS Expressions -->
+<!-- Example1 -->
+<div ng-app="example" ng-controller="control">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+
+   <div class="alert alert-success">
+  Full Name: {{firstName + " " + lastName}}
+  </div
+</div>
+
+<script>
+var app = angular.module('example', []);
+app.controller('control', function($scope) {
+    $scope.firstName= "Mustafa";
+    $scope.lastName= "ZORBAZ";
+});
+</script>
+
+<!-- Example2 -->
+<p>Burada Text içerisindeki kelime bir reng ise o rengi arkaplan rengi yapar.</p>
+<div ng-app="example2" ng-init="myCol='yellow'">
+<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+</div>
+
+
+
+<p>Döngü ile nesneleri yazdırır</p>
+<div ng-app="example3" ng-init="names=[
+{name:'Mustafa',country:'Turkey'},
+{name:'Jessi',country:'Holland'},
+{name:'Rose',country:'Germany'},
+{name:'Kai',country:'Denmark'}]">
+<ul>
+  <li ng-repeat="x in names">
+  {{ x.name + ', ' + x.country }}</li>
+</ul>
+</div>
+
+
+
+</body>
+</html>
